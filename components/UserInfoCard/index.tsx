@@ -49,10 +49,12 @@ const UserInfoCard: React.FC<PropsUserInfoCard> = ({ user }) => {
                         <span className="following__count font-semibold">{following}</span>
                         <span className="followers__text text-[#7d8590]">following</span>
                     </div>
-                    <UserContent>
-                        <AiOutlineLink color="#7d8590" />
-                        <Link href={blog} className="blog hover:text-[#2a70d4]">{blog}</Link>
-                    </UserContent>
+                    {
+                        blog && <UserContent>
+                            <AiOutlineLink color="#7d8590" />
+                            <Link href={blog} className="blog hover:text-[#2a70d4]">{blog}</Link>
+                        </UserContent>
+                    }
                     <UserContent>
                         <IoLocationOutline color="#7d8590" />
                         <span className="location ">{location}</span>
